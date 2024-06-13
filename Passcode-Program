@@ -1,0 +1,31 @@
+import 'dart:io';
+//PASSCODE PROGRAM
+void main() {
+  print("Enter passcode: ");
+  String pass = "1234";
+  String? word;
+  int tryy = 0;
+//while loo
+  while (tryy != 3) {
+    word = stdin.readLineSync();
+    if (word != pass) {
+      print("Access Denied!");
+      tryy++;
+    } else {
+      print("Access Granted!!!");
+      break;
+    }
+  }
+  // if try = 3 account gets locked
+  if (tryy == 3) {
+    print("!!!!!!!!!!!!!!!!!!!!!!!");
+    print("!!!!!!!!!!!!!!!!!!!!!!!");
+    print("!!!!!!!!!!!!!!!!!!!!!!!");
+    print("!!!!!!!!!!!!!!!!!!!!!!!");
+    print("!!!!ACCOUNT LOCKED!!!!!");
+    print("!!!!!!!!!!!!!!!!!!!!!!!");
+    print("!!!!!!!!!!!!!!!!!!!!!!!");
+    print("!!!!!!!!!!!!!!!!!!!!!!!");
+    print("!!!!!!!!!!!!!!!!!!!!!!!");
+  }
+}
