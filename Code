@@ -1,0 +1,28 @@
+import 'dart:io';
+import 'dart:math';
+//GUESSING GAME
+void main() {
+  print("Hello!\nLets play a Guessing game \nThe Rules is Simple!\nTry to guess what my number is from 1 - 20");
+  var rng = Random();
+  int rNum = rng.nextInt(20) + 1;
+  int limit = 20;
+  dynamic guess = 0;
+  int gCount = 0;
+
+  while (guess != rNum) {
+    stdout.write("Enter a number: ");
+    guess = int.parse(stdin.readLineSync()!);
+    if (guess > limit) {
+      print("You surpassed the limit Try again thats too high....");
+    } else {
+      if (guess < rNum) {
+        print("The number is higher!");
+      } else if (guess > rNum) {
+        print("The number is lower :(");
+      }
+    }
+    gCount++;
+  }
+
+  print("You guessed it correctly! You guessed $gCount Times!");
+}
