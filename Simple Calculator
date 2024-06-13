@@ -1,0 +1,45 @@
+import 'dart:io';
+
+main() {
+  print("-=-=-=-=--=-=-=-=-=-=-=-=-=-=");
+  print("Hello please input 2 numbers!");
+  print("-=-=-=-=--=-=-=-=-=-=-=-=-=-=\n");
+
+  int a = int.parse(stdin.readLineSync()!);
+  print("First Number: $a\n");
+  int b = int.parse(stdin.readLineSync()!);
+  print("Second Number: $b\n");
+  menu(a, b);
+}
+
+dynamic menu(int a2, int b2) {
+  print("-=-=-=-=--=-=-=-=-=-=-=-=-=-=");
+  print("Please choose a method");
+  print("-=-=-=-=--=-=-=-=-=-=-=-=-=-=");
+  print(
+      "[1] Addition\n[2] Subtraction\n[3] Multiplication \n[4] Division \n[5] Exit");
+  int choice = int.parse(stdin.readLineSync()!);
+
+  if (choice == 1) {
+    var c = a2 + b2;
+    print("The Sum of inputted numbers is: $c");
+    main();
+  } else if (choice == 2) {
+    var c = a2 - b2;
+    print("The Sum of inputted numbers is: $c");
+    main();
+  } else if (choice == 3) {
+    var c = a2 * b2;
+    print("The Sum of inputted numbers is: $c");
+    main();
+  } else if (choice == 4) {
+    var c = a2 / b2;
+    print("The Sum of inputted numbers is: $c");
+    main();
+  } else if (choice == 5) {
+    print("Thank you for using the app, Bye!");
+  } else {
+    print("Wrong Input");
+    main();
+  }
+}
