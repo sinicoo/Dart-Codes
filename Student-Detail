@@ -1,0 +1,28 @@
+import 'dart:io';
+//STUDENT DETAIL
+void main(){
+  print("Student Name:");
+  String sName= stdin.readLineSync()!;
+  print("Student Number");
+  String sNum= stdin.readLineSync()!;
+  print("Course:");
+  String cNum= stdin.readLineSync()!;
+  print("Year:");
+  String year= stdin.readLineSync()!;
+   print("Enrolled Courses");
+//Array List for courses
+  List courses = [];
+  var y = 0;
+  while (y < 3){
+      String encore= stdin.readLineSync()!;
+      courses.add(encore.toUpperCase());
+      y++;
+     
+  }
+//Print Summary Details
+  print("\nName: $sName\nStudent Number: $sNum\nCourse: $cNum\nYear: $year\nEnrolled Courses:  ");
+//to remove brackets
+   for (int i = 0; i <= 2; i++) {
+    print(courses[i]);
+  }
+}
